@@ -75,8 +75,8 @@ grid on
 %%
 zeta_num = 1.1;
 tsol = linspace(0, 15, 15*20);
-xsol = subs(solution_damped_rewrite, [A, om, t, xi], {-0.5, 2*pi, tsol, zeta_num});
-vsol = subs(diff(solution_damped_rewrite, t), [A, om, t, xi], {-0.5, 2*pi, tsol, zeta_num});
+xsol = subs(solution_damped_rewrite, [A, omega, t, zeta], {-0.5, 2*pi, tsol, zeta_num});
+vsol = subs(diff(solution_damped_rewrite, t), [A, omega, t, zeta], {-0.5, 2*pi, tsol, zeta_num});
 %% Animate solution
 %%
 animate_sdof(tsol, double(xsol), double(vsol))
