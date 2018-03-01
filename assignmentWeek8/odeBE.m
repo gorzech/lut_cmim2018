@@ -8,7 +8,7 @@ function [ t, y ] = odeBE( fun, tspan, y0, dfun )
 
 dt = tspan(1);
 tk = tspan(2);
-t = 0:dt:tk;
+t = (0:dt:tk)';
 
 n = length(t);
 m = length(y0);
