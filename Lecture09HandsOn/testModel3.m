@@ -58,7 +58,7 @@ body3.m = 59.2608254916;
 body3.pi = p3;
 body3.pj = p4;
 
-model_def.bodies = [body1, body2, body3];
+model_def.bodies = {body1, body2, body3};
 
 joint1.type = 'revolute';
 joint1.ibody = 0;
@@ -80,12 +80,12 @@ joint4.ibody = 3;
 joint4.jbody = 0;
 joint4.p = p4;
 
-model_def.joints = [joint1, joint2, joint3, joint4];
+model_def.joints = {joint1, joint2, joint3, joint4};
 
 force1.type = 'gravitational';
 force1.g = [0; -9.81];
 
-model_def.forces = force1;
+model_def.forces = {force1};
 
 % simulation settings
 settings.tspan = linspace(0, 1, 101);

@@ -46,19 +46,19 @@ body1.m = 2;
 body1.pi = p1;
 body1.pj = p2;
 
-model_def.bodies = [body1];
+model_def.bodies = {body1};
 
 joint1.type = 'revolute';
 joint1.ibody = 0;
 joint1.jbody = 1;
 joint1.p = p1;
 
-model_def.joints = [joint1];
+model_def.joints = {joint1};
 
 force1.type = 'gravitational';
 force1.g = [0; -9.81];
 
-model_def.forces = force1;
+model_def.forces = {force1};
 
 % simulation settings
 settings.tspan = linspace(0, 1, 101);
